@@ -1,7 +1,7 @@
 import logging
 
-from .chains import classify_ticket, parse_ticket_details, resolve_ticket, generate_support_response
-from .models import SupportResponse
+from llm_workflow_patterns.prompt_chaining.chains import classify_ticket, parse_ticket_details, resolve_ticket, generate_support_response
+from llm_workflow_patterns.prompt_chaining.models import SupportResponse
 
 logger = logging.getLogger(__name__)
 
@@ -42,3 +42,16 @@ def process_support_ticket(user_input: str) -> SupportResponse | None:
     logger.info(f"Support response generated successfully")
 
     return support_response
+
+
+def main() -> None:
+    logging.basicConfig(level=logging.INFO)
+
+    user_input = "I was charged twice for my order #12345. Please refund the duplicate payment."
+    response = process_support_ticket(user_input)
+    if response:
+        print(f"[{response.tone}] {response.response}")
+
+
+if __name__ == "__main__":
+    main()

@@ -1,7 +1,7 @@
 import logging
 
-from .config import client, MODEL
-from .models import TicketClassification, TicketDetails, Resolution, SupportResponse
+from llm_workflow_patterns.prompt_chaining.config import client, MODEL
+from llm_workflow_patterns.prompt_chaining.models import TicketClassification, TicketDetails, Resolution, SupportResponse
 
 logger = logging.getLogger(__name__)
 
