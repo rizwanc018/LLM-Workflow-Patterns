@@ -1,7 +1,7 @@
 import logging
 from pathlib import Path
 
-from openai import OpenAI
+from openai import AsyncOpenAI, OpenAI
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 logging.basicConfig(
@@ -12,10 +12,12 @@ logging.basicConfig(
 
 
 class Settings(BaseSettings):
-    model_config = SettingsConfigDict(env_file=Path(__file__).resolve().parents[3] / ".env")
+    model_config = SettingsConfigDict(
+        env_file=Path(__file__).resolve().parents[3] / ".env")
     openai_api_key: str
 
 
 settings = Settings()  # type: ignore
 client = OpenAI(api_key=settings.openai_api_key)
+asyncClient = AsyncOpenAI(api_key=settings.openai_api_key)
 MODEL = "gpt-4o"
