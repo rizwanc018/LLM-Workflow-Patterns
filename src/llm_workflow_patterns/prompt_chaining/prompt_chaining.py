@@ -7,7 +7,7 @@ logger = logging.getLogger(__name__)
 
 
 def process_support_ticket(user_input: str) -> SupportResponse | None:
-    logging.info("Processing user input")
+    logger.info("Processing user input")
 
     ticket_classification = classify_ticket(user_input)
     if not ticket_classification:
@@ -30,7 +30,7 @@ def process_support_ticket(user_input: str) -> SupportResponse | None:
             f"Ticket requires human escalation - Department: {resolution.department}"
         )
         print(
-            f"⚠️ This ticket requires human assistance. "
+            f"This ticket requires human assistance. "
             f"Escalating to the {resolution.department} team."
         )
         return None
