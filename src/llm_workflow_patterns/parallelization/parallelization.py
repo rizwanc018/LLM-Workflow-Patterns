@@ -1,7 +1,8 @@
 import asyncio
 import logging
 
-from llm_workflow_patterns.parallelizaion.validators import check_security, validate_support_request
+from llm_workflow_patterns.parallelization.validators import check_security, validate_support_request
+
 logger = logging.getLogger(__name__)
 
 
