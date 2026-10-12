@@ -39,7 +39,6 @@ def process_support_request(user_input: str) -> SupportResponse | None:
 
 
 def main() -> None:
-    logging.basicConfig(level=logging.INFO)
 
     # user_input = "I want to request a refund for my recent payment."
     # user_input = "The dashboard is loading forever and never shows my data."

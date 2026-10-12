@@ -45,7 +45,6 @@ def process_support_ticket(user_input: str) -> SupportResponse | None:
 
 
 def main() -> None:
-    logging.basicConfig(level=logging.INFO)
 
     user_input = "I was charged twice for my order #12345. Please refund the duplicate payment."
     response = process_support_ticket(user_input)
