@@ -1,7 +1,7 @@
 
 import logging
 
-from llm_workflow_patterns.parallelizaion.models import SecurityCheck, TicketValidation
+from llm_workflow_patterns.parallelization.models import SecurityCheck, TicketValidation
 from llm_workflow_patterns.config.config import MODEL, asyncClient
 
 logger = logging.getLogger(__name__)

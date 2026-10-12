@@ -17,7 +17,8 @@ dependencies = [
 llm-workflow-patterns = "llm_workflow_patterns:main"
 prompt-chaining = "llm_workflow_patterns.prompt_chaining.prompt_chaining:main"
 routing = "llm_workflow_patterns.routing.routing:main"
-parallelization = "llm_workflow_patterns.parallelizaion.parallelization:main"
+parallelization = "llm_workflow_patterns.parallelization.parallelization:main"
+orchestrator = "llm_workflow_patterns.orchestrator_workers.main:main"
 
 [build-system]
 requires = ["uv_build>=0.12.21,<0.13.0"]
