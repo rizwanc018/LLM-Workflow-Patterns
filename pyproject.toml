@@ -19,6 +19,7 @@ prompt-chaining = "llm_workflow_patterns.prompt_chaining.prompt_chaining:main"
 routing = "llm_workflow_patterns.routing.routing:main"
 parallelization = "llm_workflow_patterns.parallelization.parallelization:main"
 orchestrator = "llm_workflow_patterns.orchestrator_workers.main:main"
+evaluator-optimizer = "llm_workflow_patterns.evaluator_optimizer.main:main"
 
 [build-system]
 requires = ["uv_build>=0.12.21,<0.13.0"]
